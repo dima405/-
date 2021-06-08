@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %}Flasky - Подтверждение аккаунта{%
+endblock %} {% block page_content %}
+<div class="page-header">
+  <h1>Привет, {{ current_user.username }}!</h1>
+  <h3>Твой аккаунт не подтвержден.</h3>
+  <p>
+    Подтвердите свою учетную запись, для этого откройте свою электронную почту.
+  </p>
+  <p>
+    Хотите еще одно с подтверждением?
+    <a href="{{ url_for('auth.resend_confirmation') }}">Нажмите сюда!</a>
+  </p>
+</div>
+{% endblock %}
